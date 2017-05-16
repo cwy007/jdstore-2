@@ -1,6 +1,10 @@
 class OrdersController < ApplicationController
   before_action :authenticate_user!, only: [:create]
 
+  def show
+    @order = Order.find(params[:id])
+  end
+  
   def create
     @order = Order.new(order_params)
     @order.user = current_user
@@ -16,7 +20,7 @@ class OrdersController < ApplicationController
         product_list.quantity = cart_item.quantity
         product_list.save
       end
-      
+
       redirect_to order_path(@order)
     else
       render "carts/checkout"
