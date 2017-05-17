@@ -14,8 +14,7 @@
         <% @order.product_lists.each do |product_list| %>
           <tr>
             <td>
-              <%= link_to product_list.product_name,
-                  product_path(Product.find_by(title: product_list.product_name).id) %> #自己加上的链接
+              <%= product_list.product_name %>
             </td>
             <td>
               <%= product_list.product_price %>

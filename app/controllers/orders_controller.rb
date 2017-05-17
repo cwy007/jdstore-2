@@ -2,7 +2,7 @@ class OrdersController < ApplicationController
   before_action :authenticate_user!, only: [:create]
 
   def show
-    @order = Order.find_by_token(params[:token])
+    @order = Order.find_by_token(params[:id])
   end
 
   def create
