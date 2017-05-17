@@ -14,9 +14,18 @@
 #  token            :string
 #  is_paid          :boolean          default(FALSE)
 #  payment_method   :string
+#  aasm_state       :string           default("order_placed")
+#
+# Indexes
+#
+#  index_orders_on_aasm_state  (aasm_state)
 #
 
 class Order < ApplicationRecord
+  include AASM
+
+  aasm do
+  end
   belongs_to :user
   has_many :product_lists
 

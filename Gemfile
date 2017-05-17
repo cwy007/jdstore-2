@@ -38,6 +38,7 @@ gem 'mini_magick'               #调整资料尺寸
 gem 'awesome_rails_console'     #排版 rails c 中的资料显示
 gem 'annotate'                  #注释model信息
 gem "letter_opener", :group => :development   #在开发时，预览邮件
+gem 'aasm'
 
 
 
