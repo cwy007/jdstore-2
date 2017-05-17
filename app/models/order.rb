@@ -32,7 +32,7 @@ class Order < ApplicationRecord
     state :order_cancelled
     state :good_returned
 
-    event :make_payment do
+    event :make_payment, after_commit: :pay! do   #只有在make_payment 完成以后，才调用 pay! method 
       transitions from: :order_placed, to: :paid
     end
 
