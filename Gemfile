@@ -32,11 +32,12 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'simple_form'
-gem 'font-awesome-rails'
-gem 'carrierwave'
-gem 'mini_magick'
-gem 'awesome_rails_console'
-gem 'annotate'
+gem 'font-awesome-rails'        #icon图标
+gem 'carrierwave'               #上传图片、文件
+gem 'mini_magick'               #调整资料尺寸
+gem 'awesome_rails_console'     #排版 rails c 中的资料显示
+gem 'annotate'                  #注释model信息
+gem "letter_opener", :group => :development   #在开发时，预览邮件
 
 
 
