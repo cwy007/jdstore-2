@@ -4,7 +4,7 @@ class OrdersController < ApplicationController
   def show
     @order = Order.find(params[:id])
   end
-  
+
   def create
     @order = Order.new(order_params)
     @order.user = current_user
